@@ -422,6 +422,22 @@ hr {
         .tab-content__btn {
             margin-bottom: 2rem;
         }
+
+        .tab-content__table {
+
+            tbody tr {
+                border: 1px solid $dark-bg;
+            }
+
+            td {
+                padding: 1rem 1.5rem;
+            }
+        }
+    }
+
+    // : FOOTER:
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
     }
 
 }

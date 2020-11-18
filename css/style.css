@@ -396,5 +396,15 @@ hr {
   .tab-content__item-3 .tab-content__btn {
     margin-bottom: 2rem;
   }
+  .tab-content__item-3 .tab-content__table tbody tr {
+    border: 1px solid #141414;
+  }
+  .tab-content__item-3 .tab-content__table td {
+    padding: 1rem 1.5rem;
+  }
+  .footer-links {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
 }
 /*# sourceMappingURL=style.css.map */
