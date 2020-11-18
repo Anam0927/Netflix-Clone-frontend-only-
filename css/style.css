@@ -140,8 +140,8 @@ h4 {
   padding: 1rem 0;
   margin: 0 5px;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
 }
 
 .tabs .container div:hover {
@@ -255,7 +255,7 @@ h4 {
 .tab-content__item-3 .tab-content__table {
   grid-column: span 3;
   width: 100%;
-  font-size: 0.8rem;
+  font-size: 1rem;
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -277,6 +277,10 @@ h4 {
 .tab-content__item-3 .tab-content__table td {
   padding: 0.8rem 1.2rem;
   text-align: center;
+}
+
+.no-show {
+  display: none !important;
 }
 
 hr {
@@ -330,11 +334,17 @@ hr {
   .showcase__logo {
     width: 25%;
   }
+  .showcase__content {
+    margin: 25% auto;
+  }
   .hide-sm {
     display: none;
   }
   .container {
     width: 90%;
+  }
+  .tab-content__text {
+    font-size: 1.5rem !important;
   }
   .tab-content__item-1 {
     -webkit-box-orient: vertical;
@@ -362,9 +372,6 @@ hr {
         -ms-grid-row-align: center;
         align-self: center;
     margin-bottom: 2rem;
-  }
-  .tab-content__item-2 .tab-content__text {
-    font-size: 1.5rem;
   }
   .tab-content__item-2 .tab-content__img-2 h3 {
     font-size: initial;
