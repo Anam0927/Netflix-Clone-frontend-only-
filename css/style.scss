@@ -7,9 +7,10 @@ $dark-bg: #141414;
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
 
     background-color: #000;
     color: #999;
@@ -17,8 +18,11 @@ html, body {
     line-height: 1.2;
 }
 
-h1, h2, h3, h4 {
-    color:#fff;
+h1,
+h2,
+h3,
+h4 {
+    color: #fff;
 }
 
 // : Button styles
@@ -45,10 +49,10 @@ h1, h2, h3, h4 {
 // : SHOWCASE
 .showcase {
     width: 100%;
-    height: 100vh;      // -- making the showcase take up the whole screen
+    height: 100vh; // -- making the showcase take up the whole screen
 
     // -- background styles
-    background-image: radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,1)), url(../images/background.jpg);
+    background-image: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url(../images/background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -77,8 +81,8 @@ h1, h2, h3, h4 {
         // -- positioning styles
         position: absolute;
         right: 50px;
-        top: 50%;
-        transform: translateY(-50%);
+        // top: 40%;
+        // transform: translateY(-50%);
 
         // -- hover styles
         transition: all 0.3s ease-in-out;
@@ -147,15 +151,15 @@ h1, h2, h3, h4 {
         display: flex;
         justify-content: space-between;
         align-items: stretch;
-    
+
         div {
             flex: 1;
             padding: 1rem 0;
             margin: 0 5px;
-    
+
             cursor: pointer;
             transition: all 0.3s ease-out;
-    
+
             &:hover {
                 color: #fff;
             }
@@ -164,10 +168,9 @@ h1, h2, h3, h4 {
 }
 
 // : TAB CONTENT
-.tab-content {
-    height: 30%;
 
-    // -- tab-1
+ // -- tab-1
+.tab-content {
     &__item-1 {
         padding: 4rem 0;
 
@@ -333,4 +336,92 @@ hr {
     li {
         line-height: 2;
     }
+}
+
+// : MEDIA QUERIES
+
+// -- 768px (tabs)
+@media (max-width: 768px) {
+
+    // : SHOWCASE
+    .showcase {
+        height: 90vh;
+
+        &__top {
+            text-align: left;
+        }
+
+        &__logo {
+            width: 25%;
+        }
+    }
+    
+    // : hide tab heading's text
+    .hide-sm {
+        display: none;
+    }
+
+    // : increasing container width
+    .container {
+        width: 90%;
+    }
+
+    // -- tab-1
+    .tab-content__item-1 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tab-content__img {
+        margin-top: 2rem;
+        width: 75%;
+    }
+
+    // -- tab-2
+    .tab-content__item-2 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        .btn {
+            align-self: center;
+            margin-bottom: 2rem;
+        }
+
+        .tab-content__text {
+            font-size: 1.5rem;
+        }
+
+        .tab-content__img-2 {
+
+            h3 {
+                font-size: initial;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            img {
+                width: 75%;
+            }
+        }
+    }
+
+    // -- tab-3
+    .tab-content__item-3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .tab-content__text {
+            margin-bottom: 1rem;
+        }
+
+        .tab-content__btn {
+            margin-bottom: 2rem;
+        }
+    }
+
 }
