@@ -353,7 +353,7 @@ hr {
 
     // : SHOWCASE
     .showcase {
-        height: 90vh;
+        height: 70vh;
 
         &__top {
             text-align: left;
@@ -364,7 +364,8 @@ hr {
         }
 
         &__content {
-            margin: 25% auto;
+            width: 80%;
+            margin: 35% auto 0;
         }
     }
 

@@ -326,7 +326,7 @@ hr {
 
 @media (max-width: 768px) {
   .showcase {
-    height: 90vh;
+    height: 70vh;
   }
   .showcase__top {
     text-align: left;
@@ -335,7 +335,8 @@ hr {
     width: 25%;
   }
   .showcase__content {
-    margin: 25% auto;
+    width: 80%;
+    margin: 35% auto 0;
   }
   .hide-sm {
     display: none;
